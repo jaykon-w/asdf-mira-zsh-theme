@@ -4,7 +4,7 @@ ASDF_LOCAL_FILE='./.tool-versions';
 
 function get_lang_and_version() {
   if test -f "$ASDF_LOCAL_FILE"; then
-    local content=$(cat $ASDF_LOCAL_FILE)
+    local content=$(head -n 1 $ASDF_LOCAL_FILE)
     local lang=$(echo $content | cut -d " " -f 1)
     local version=$(echo $content | cut -d " " -f 2)
 
